@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+                        box-sizing: border-box;
+                        font-family: Arial, Helvetica, sans-serif;
+                        font-weight: bold;
+                        letter-spacing: -1.5px;
+
+        }
+
+        h1 {
+            font-size: 3.6em;
+            margin: 0px;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+        }
+        h2 {
+            margin-top: 0px;
+            font-size: 2.6em;
+                        text-transform: uppercase;
+                        max-width: 800px;
+
+        }
+
+        .links:hover {
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+                                    text-transform: lowercase;
+
+        }
+        
+
+        body::-webkit-scrollbar {
+    display: none; /* Hides the scrollbar */
+}
+
+        body {
+            padding: 0px;
+            margin: 0px;
+
+            font-size: 16px;
+
+        }
+        .project-wrapper{
+            padding: 24px;
+            width: 100vw;
+
+            box-sizing: border-box;
+            position: fixed;
+                        border: 2px solid blue;
+                         overflow: hidden;
+
+
+        }
+
+        .project-gallery-wrapper{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            max-height: 90vh;
+            height: auto;
+            width: auto;
+            border: 0px solid black;
+
+            margin-bottom: 24px;
+          
+        }
+
+        .project-img {
+            height: auto;
+            max-height: 77vh;
+        }
+
+        .project-img.small {
+            height: 60vh;
+        }
+
+        .page-wrapper {
+            overflow: hidden; 
+                        height: 600vh;
+       
+}
+
+.project-description-wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: -1;
+}
+
+.project-description{
+    padding: 24px;
+}
+
+    </style>
+</head>
+<div class="page-wrapper"> 
+    <div class="project-wrapper"> 
+            <h1 class="project-heading"> WiKo Flyer</h1>
+
+        <div class="project-gallery-wrapper"> 
+            <img src="projects\wiko\Mockup-Big.jpg" alt="" class="project-img">
+            <img src="projects\WiKo\Mockup-Big.jpg" alt="" class="project-img">
+<img src="projects\wiko\1.jpeg" alt="" class="project-img small">
+            <img src="projects\wiko\Mockup-Big.jpg" alt="" class="project-img">
+                        
+
+
+
+        </div>
+                        <h2 class="links"> agains</h1>
+
+    </div>
+
+    <div class="project-description-wrapper"> 
+                <h2 class="project-description"> 
+                    Leistung: <br>
+                    Konzeption und Design
+                    Digitale und Analoge Flyer
+                    Programmheft <br>
+                    Screendesign für Event </h2>
+    </div>
+
+
+</div>
+
+<body>
+    <script> 
+        const pageWrapper = document.querySelector('.page-wrapper');
+        const projectWrapper = document.querySelector('.project-wrapper');
+        const projectGalleryWrapper = document.querySelector('.project-gallery-wrapper');
+        const projectDescriptionWrapper = document.querySelector(('.project-description-wrapper'));
+
+
+
+        
+        window.addEventListener('scroll' , ()=> {
+            // projectwrapper position moves to the left 
+        const scrollY = window.scrollY;
+        projectGalleryWrapper.style.transform = `translateX(-${scrollY}px)`;
+        })
+
+    </script>
+    
+</body>
+</html>
